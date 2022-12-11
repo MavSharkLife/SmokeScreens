@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Add div variables here -->
+    <title>Smoke Screen</title>
+    <div class=background></div>
+  <div class="heading"></div>
+  <div id="tabs">
+    <button class="homebutt" onclick="openTab('home')">Home</button>
+    <button class="Aboutbutt" onclick="openTab('about')">About</button>
+    <button class="hiddentab" onkeydown="openPage(event)">Screens</button>
+  </div>
+<div id="banner" class="upbanner"></div>
+  <!-- HTML for the tab content -->
+  <div id="home" class="tabcontent">
+    <div class="topbannerlol">
+    <h1>Smoke Screens</h1>
+  </div>
+<div class="blog">
+    <p>Screens of the future.</p>
+
+  </div>
+  </div>
+  <div id="about" class="tabcontent">
+    <h1>About</h1>
+    <div class="aboutpagee">
+    <p>Smoke screens for phones are a type of security device that is used to protect against unauthorized access to personal information. They work by creating a thick, opaque cloud of smoke that makes it difficult for people to see or access the phone's screen. This can provide a critical layer of protection for sensitive or personal data, such as passwords, financial information, and personal photos.
+There are many different types of smoke screens for phones available on the market. Some are designed to be activated manually, while others can be set to activate automatically when the phone is unattended. Some smoke screens for phones are designed to be used with specific phone models, while others are compatible with a wider range of devices.
+One of the key advantages of smoke screens for phones is their ability to provide a fast and effective barrier without causing harm to the phone or its user. Unlike other security measures, such as password protection or biometric authentication, smoke screens do not require any additional actions or inputs from the user. They are also non-toxic and environmentally friendly, making them safe to use with any phone.
+In addition to their security benefits, smoke screens for phones can also be used for other purposes. For example, they can be used to create special effects for videos or social media posts. They can also be used as a fun and unique way to show off your phone to friends and family.
+Overall, smoke screens for phones are a valuable tool for protecting against unauthorized access to personal information. They are convenient, effective, and safe to use, making them an important accessory for any smartphone user.</p>
+</div>  </div>
+<div id="screens" class="tabcontent">
+  <div id="gambutton">
+    <button class=gambutt>
+    <a href="Tetris.html">Tetris</a>
+  </button>
+</div> </div>
+  <!-- CSS for styling the tabs -->
+  <style>
+
+  body {
+    background-color: #B6B6B6
+  }
+    /* Style the tab buttons */
+    .homebutt {
+display: inline-block;
+      border: 5px solid #1C1C1C;
+      background-color: #45B0E1;
+      padding: 10px 1px;
+      cursor: pointer;
+      font-size: 75px;
+      font-family: "Dosis", sans-serif;
+      position: absolute;
+      z-index: 1;
+      right: 0px;
+      top: 0px;
+
+    }
+
+    .Aboutbutt {
+display: inline-block;
+      border: 5px solid #1C1C1C;
+      background-color: #45B0E1;
+      padding: 10px 1px;
+      cursor: pointer;
+      font-size: 75px;
+      font-family: "Dosis", sans-serif;
+      position: absolute;
+      z-index: 1;
+right: 185px;
+top: 0px;
+    }
+.hiddentab {
+position: absolute;
+z-index: -1;
+
+
+}
+.aboutpagee {
+
+position: absolute;
+top: 250px;
+
+}
+
+     /* Style the banner */
+     .upbanner {
+       height: 150px; /* Set the height of the banner */
+       background-color: #383838;
+  position: absolute;
+  top: 0;
+  down: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+
+     }
+    /* Style the tab content */
+    .tabcontent {
+      font-family: "Dosis", sans-serif; /* Set the font-family to Dosis */
+    font-weight: 800; /* Set the font-weight to 800 (bold) */
+    -webkit-text-stroke: 1px black; /* Add a 1px black stroke to the text */
+      font-size: 200%;
+      display: none;
+      padding: 0px 20px;
+      font-style: "Dosis";
+
+down: 0;
+top: 0;
+right: 0;
+left: 0;
+    }
+
+    .blog {
+position: absolute;
+down: 0px;
+top: 100px;
+right: 0;
+left: 0;
+margin-top: 125px;
+    }
+    .topbannerlol {
+position: absolute;
+down: 0;
+top: -15px;
+right: 0;
+left: 0;
+    }
+  </style>
+
+  <!-- JavaScript for adding the tab functionality -->
+  <script>
+  function openPage(event) {
+    if (event.key === 't') {
+      window.open('C:/Users/easto/Downloads/mario.html');
+    }
+  }
+    // Show the home tab content when the page loads
+    window.onload = function() {
+      var homeTab = document.getElementById('home');
+      homeTab.style.display = 'block';
+    }
+
+    function openTab(tabName) {
+      // Hide all tab content
+      var tabContents = document.getElementsByClassName('tabcontent');
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = 'none';
+      }
+
+      // Show the selected tab content
+      if (tabName == 'home') {
+        var tab = document.getElementById('home');
+        tab.style.display = 'block';
+      } else if (tabName == 'about') {
+        var tab = document.getElementById('about');
+        tab.style.display = 'block';
+      }
+      else if (tabName == 'screens'){
+        var tab = document.getElementById('screens');
+        tab.style.display = 'block';
+      }
+    }
+  </script>
+  </head>
+  <body>
+
+  </body>
+</html>
